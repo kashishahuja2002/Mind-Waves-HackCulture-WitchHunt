@@ -6,7 +6,7 @@ const path = require('path');
 
 mongoose.set('strictQuery', true) 
 // replace <dbuser> and <dbpassword> with your MongoDB Atlas database user credentials
-const uri = 'mongodb+srv://kashishahuja2002:kashish%40atlas15@mindwaves.xnruwfn.mongodb.net/?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://kashishahuja2002:kashish%40atlas15@mindwaves.xnruwfn.mongodb.net/?retryWrites=true&w=majority&app-Name=MindWaves';
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -30,7 +30,10 @@ mongoose.connect(uri, {
 
 app.use(express.static(path.join(__dirname, '../../../build')));
 
-app.get('/', function (req, res) {
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, '../../../build', 'index.html'));
+// });
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../../../build', 'index.html'));
 });
 

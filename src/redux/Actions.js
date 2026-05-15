@@ -5,7 +5,7 @@ export const Auth = (url, body) => {
     return (dispatch) => {
         http.HttpCall(url, "post", {}, body)
             .then((response) => {
-                if(response.data.status === 200) {
+                if(response.data.status === 200 || response.data.status === 201) {
                     localStorage.setItem('token', response.data.token);
                 }
             })
