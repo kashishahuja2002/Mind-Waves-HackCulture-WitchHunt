@@ -83,7 +83,7 @@ https://user-images.githubusercontent.com/55057608/224472167-4f89bdc5-212c-4b68-
    npm start
    ```
    
-5. If everything is done in order, the application will be running at "http://127.0.0.1:8000" or your localhost "http://localhost:8000/".
+6. If everything is done in order, the application will be running at "http://127.0.0.1:8000" or your localhost "http://localhost:8000/".
 
 
 
